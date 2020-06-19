@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useSetStateBackup = (initialValue) => {
+const useSetStateBackup = (initialValue) => {
     const [backUp, setBackUp] = useState([initialValue]);
     const [data, setData] = useState(initialValue);
 
@@ -22,3 +22,5 @@ export const useSetStateBackup = (initialValue) => {
         () => setBackUp([]),
     ];
 };
+
+export default useSetStateBackup;
